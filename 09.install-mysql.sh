@@ -10,7 +10,7 @@ then
 # else
     # echo "info: you are root user"
 fi
-
+# it is our responsibility  to check it is installed or not
   yum install mysql -y
   if [ $? -ne 0 ]
   then
