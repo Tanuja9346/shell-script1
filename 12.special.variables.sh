@@ -7,3 +7,5 @@ echo "variable 1st : $VAR1"
 
 
 echo "all variables : $@"
+
+echo "number of variables: $#"
