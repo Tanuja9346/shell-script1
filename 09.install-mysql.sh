@@ -3,7 +3,7 @@
 #our program goal is to install mysql
 USERID=$(id -u)
 
-if[ $USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "Error: please run this script with root access"
     exit 1
@@ -12,7 +12,7 @@ then
 fi
 
   yum install mysql -y
-  if[ $? -ne 0 ]
+  if [ $? -ne 0 ]
   then
       echo "instalation of mysql is error"
       exit 1
