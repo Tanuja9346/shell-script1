@@ -34,4 +34,4 @@ G="\e[32m"
       else 
           echo -e "$Y $i is all ready installed $N"
        fi
-done
+  done
