@@ -34,6 +34,6 @@ fi
 
   yum install postfix -y &>>$LOGFILE
 
-  VALIDATE $?  "installing postfix"              #validate is function and $? input that is exit
+  VALIDATE $?  "installing postfix"             #validate is function and $? input that is exit
 
   
