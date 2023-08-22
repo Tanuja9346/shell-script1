@@ -12,10 +12,10 @@ VALIDATE(){
     # $1 is the receive the argument
     if [ $1 -ne 0 ]
   then
-      echo "$2.... $R is error"
+      echo -e "$2.... $R is error"
       exit 1
   else
-      echo "$2.... $G is sucess"
+      echo -e "$2.... $G is sucess"
    fi
 }
 
