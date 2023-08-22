@@ -4,7 +4,7 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
-validate(){
+VALIDATE(){
     # $1 is the receive the argument
     if [ $1 -ne 0 ]
   then
@@ -30,10 +30,10 @@ fi
 
   yum install mysql -y &>>$LOGFILE
 
-  validate $? "installing mysql"
+  VALIDATE $? "installing mysql"
 
   yum install postfix -y &>>$LOGFILE
 
-  validate $?  "installing postfix"              #validate is function and $? input that is exit
+  VALIDATE $?  "installing postfix"              #validate is function and $? input that is exit
 
   
