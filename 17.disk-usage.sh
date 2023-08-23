@@ -29,7 +29,7 @@ do
     
     if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
-     echo: message"HIGH_DISK_USAGE on $PARTITION: $USAGE"
+     echo message"HIGH_DISK_USAGE on $PARTITION: $USAGE"
    fi
 
 
