@@ -41,3 +41,5 @@ echo -e "message: $message"
 #How to call other shellscript from your current script.  
 sh mail.sh tanujach9346@gmail.com "HIGH_DISK_USAGE" "$MESSAGE" "DEVOPS_TEAM" "HIGH_DISK_USAGE"
 
+#as a devops engineer above statement should check by us remaining email configuration i.e here mail.sh will take care by linux admin
+
