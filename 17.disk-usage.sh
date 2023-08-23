@@ -37,3 +37,5 @@ done <<< $DISK_USAGE
 
 echo -e "message: $message"
 
+echo "$MESSAGE" | mail -s "HIGH_DISK_USAGE" tanujach9346@gmail.com
+
