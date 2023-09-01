@@ -5,6 +5,7 @@ NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalouge" "user" "cart" "shipping"
 INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-0ac9f1b8ae2c47986
+DOMAIN_DOMAIN=joindevops.xyz
 
 #loop through the array.
 #if mysql or mongodb are instance-type should be t3.medium , for all others it is t2.micro.
@@ -20,6 +21,20 @@ do
    echo "creating $i instance"
     IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID  --instance-type $INSTANCE_TYPE --security-group-ids  $SECURITY_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"  | jq -r '.Instances[0].PrivateIpAddress')
   echo "created $i instance: $IP_ADDRESS"
+
+  aws route53 change-resource-record-sets --hosted-zone-id Z05978317AGVWGW3MLYB --change-batch ' 
+  {
+            "Changes": [{
+            "Action": "CREATE",
+                        "ResourceRecordSet": {
+                               "Name": "'$i.$DOMAIN_NAME'",   
+                               "Type": "A",
+                               "TTL": 300,
+                               "ResourceRecords": [{ "Value": "'$IP_ADDRESS'"}] 
+                        }}]
+  }
+  '
+
 
 #running above command line u will get blank instance so we dont know which instance is running so declare TAG SO U can tag before the instance or after creating instance.
 done  
