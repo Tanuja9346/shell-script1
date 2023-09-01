@@ -38,3 +38,7 @@ do
 
 #running above command line u will get blank instance so we dont know which instance is running so declare TAG SO U can tag before the instance or after creating instance.
 done 
+
+#improvements
+#check instances already created or not
+#update the route53 records.
