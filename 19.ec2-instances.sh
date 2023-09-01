@@ -7,6 +7,7 @@ IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-0ac9f1b8ae2c47986
 DOMAIN_DOMAIN=joindevops.xyz
 
+
 #loop through the array.
 #if mysql or mongodb are instance-type should be t3.medium , for all others it is t2.micro.
 
@@ -34,7 +35,6 @@ do
                         }}]
   }
   '
-
 
 #running above command line u will get blank instance so we dont know which instance is running so declare TAG SO U can tag before the instance or after creating instance.
 done  
