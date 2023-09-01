@@ -5,7 +5,7 @@ NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalouge" "user" "cart" "shipping"
 INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-0ac9f1b8ae2c47986
-DOMAIN_DOMAIN=joindevops.xyz
+DOMAIN_NAME=joindevops.xyz
 
 
 #loop through the array.
