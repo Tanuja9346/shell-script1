@@ -37,7 +37,7 @@ done <<< $DISK_USAGE
 
 echo -e "message: $message"
 
-echo "$MESSAGE" | mail -s "HIGH_DISK_USAGE" tanujach9346@gmail.com
+echo "$message" | mail -s "HIGH_DISK_USAGE" tanujach9346@gmail.com
 #How to call other shellscript from your current script.  
 # sh mail.sh tanujach9346@gmail.com "HIGH_DISK_USAGE" "$MESSAGE" "DEVOPS_TEAM" "HIGH_DISK_USAGE"
 
