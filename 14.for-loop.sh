@@ -2,7 +2,7 @@
 
 DATE=$(date +%F)
 USERID=$(id -u)
-LOGSDIR=/home/centos/shell-script.logs
+LOGSDIR=/home/centos/shell-script.logs   # here creating directory for storing logs i.e shell-script.logs
 #/home/centos/shell-script.logs/scriptname/date.log
 SCRIPTNAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log

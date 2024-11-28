@@ -22,12 +22,12 @@ message=
 while IFS= read line
 do
 # this command will give u usage in number format for comparision
-    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f1)
+    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f1)  #disk number
     ## this command will give us partition 
-    PARTITION=$(echo $line | awk '{print $1}')
+    PARTITION=$(echo $line | awk '{print $1}') # disk created name.
     #now u need to check it is more than thershold or not.
     
-    if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
+    if [ $USAGE -gt $DISK_USAGE_THRESHOLD ];
     then
       message+="HIGH_DISK_USAGE on $PARTITION: $USAGE \n"
    fi
@@ -37,9 +37,9 @@ done <<< $DISK_USAGE
 
 echo -e "message: $message"
 
-#echo "$MESSAGE" | mail -s "HIGH_DISK_USAGE" tanujach9346@gmail.com
+echo "$MESSAGE" | mail -s "HIGH_DISK_USAGE" tanujach9346@gmail.com
 #How to call other shellscript from your current script.  
-sh mail.sh tanujach9346@gmail.com "HIGH_DISK_USAGE" "$MESSAGE" "DEVOPS_TEAM" "HIGH_DISK_USAGE"
+# sh mail.sh tanujach9346@gmail.com "HIGH_DISK_USAGE" "$MESSAGE" "DEVOPS_TEAM" "HIGH_DISK_USAGE"
 
 #as a devops engineer above statement should check by us remaining email configuration i.e here mail.sh will take care by linux admin
 
