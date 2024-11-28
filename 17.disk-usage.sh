@@ -27,7 +27,7 @@ do
     PARTITION=$(echo $line | awk '{print $1}') # disk created name.
     #now u need to check it is more than thershold or not.
     
-    if [ $USAGE -gt $DISK_USAGE_THRESHOLD ];
+    if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
       message+="HIGH_DISK_USAGE on $PARTITION: $USAGE \n"
    fi
