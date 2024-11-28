@@ -15,7 +15,7 @@ Y="\e[33m"
 G="\e[32m"
 
 DISK_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
-DISK_USAGE_THRESHOLD=1
+DISK_USAGE_THRESHOLD=0.5
 message=
 
 ## ifs means internal field seprator is space.
