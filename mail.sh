@@ -5,7 +5,7 @@
 
 TO_ADDRESS=$1
 SUBJECT=$2
-BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
+BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)  #escaping sed content in shellscript
 echo "escaped content: $BODY"
 TEAM_NAME=$4
 ALERT_TYPE=$5
